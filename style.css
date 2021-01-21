@@ -1,0 +1,40 @@
+ul {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+li {
+  width: 150px;
+  height: 150px;
+  list-style: none;
+  border: 1px solid black;
+  text-align: center;
+  cursor: pointer;
+}
+
+button {
+  width: 40px;
+  height: 30px;
+}
+
+button:last-child {
+  margin-left: 15px;
+}
+
+.containerSecond li {
+  width: 100px;
+  height: 100px;
+}
+
+.blue {
+  background:blue;
+}
+
+.green {
+  background:green;
+} 
+
+.yellow {
+  background:yellow;
+}
