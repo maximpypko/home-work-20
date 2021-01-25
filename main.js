@@ -16,13 +16,25 @@ $('div').click(function (e) {
   let count = +$(this).closest('.squareFirst').children('span').text();
   
     if ($(e.target).hasClass('minus') && count == 0){
-      console.log('No')
+      $(e.target).prop('disabled', true)
 
     }  else if ($(e.target).hasClass('plus')) {
-      $(this).closest('.squareFirst').children('span').text(count += 1);
+      $(this)
+        .closest('.squareFirst')
+        .children('span')
+        .text(count += 1);
+      $(this)
+        .closest('.squareFirst')
+        .children('div')
+        .children('.minus')
+        .prop('disabled', false);
   
-    } else   {
-      $(this).closest('.squareFirst').children('span').text(count -= 1);
+    } else {
+      $(this)
+        .closest('.squareFirst')
+        .children('span')
+        .text(count -= 1);
+      $(e.target).prop('disabled', false)
     }
 });
 
